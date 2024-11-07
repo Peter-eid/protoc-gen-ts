@@ -1527,8 +1527,8 @@ function createSerialize(
         } else if (field.isBoolean(fieldDescriptor)) {
           condition = ts.factory.createBinaryExpression(
             propAccessor,
-            ts.factory.createToken(ts.SyntaxKind.ExclamationEqualsToken),
-            ts.factory.createFalse(),
+            ts.factory.createToken(ts.SyntaxKind.ExclamationEqualsEqualsToken),
+            ts.factory.createStringLiteral("undefined"),
           );
         } else {
           condition = ts.factory.createBinaryExpression(
